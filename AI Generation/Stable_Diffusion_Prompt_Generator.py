@@ -43,9 +43,9 @@ class stable_diffusion_prompt_gen(object):
                 randomWordIndex = random.randint(1, wordListMaxValue)
                 randomWord = web2lowersetlist[randomWordIndex]            
                 if x == fps-1:
-                    generatedVideoPromptJson.write("\n" + " \"" + str(initialFPS) + "\"" + ": " + "\"" + values['+INPUT+'] + ", " + "highly detailed, ultra hd, sharp photo, crepuscular rays, in focus, " + randomWord + "\"")
+                    generatedVideoPromptJson.write("\n" + " \"" + str(initialFPS) + "\"" + ": " + "\"" + values['+INPUT+'] + ", " + "RAW photo, subject, (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, " + randomWord + "\"")
                 else:
-                    generatedVideoPromptJson.write("\n" + " \"" + str(initialFPS) + "\"" + ": " + "\"" + values['+INPUT+'] + ", " + "highly detailed, ultra hd, sharp photo, crepuscular rays, in focus, " + randomWord + "\"" + ",")
+                    generatedVideoPromptJson.write("\n" + " \"" + str(initialFPS) + "\"" + ": " + "\"" + values['+INPUT+'] + ", " + "RAW photo, subject, (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, " + randomWord + "\"" + ",")
                 initialFPS = initialFPS + 30
             generatedVideoPromptJson.write("\n"+ "}")
             generatedVideoPromptJson.close()
